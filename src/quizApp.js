@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import quizCollection from "./quizCollection";
+import './quizApp.css';
 
 const QuizApp = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -29,13 +30,13 @@ const QuizApp = () => {
         const updateScore = Math.floor(((score + 1) / 10) * 100);
         return (
             <>
-                <div className="content_message">
-                    <div className="message_head">
+                <div className="main_content">
+                    <div className="content_head">
                         <center>QUIZ COMPLETED! </center>
                         <center>Your Score: {updateScore}%</center>
                     </div>
                     <div className="message_button">
-                        <button onClick={retryQuiz}>Retry</button>
+                        <button className="btn btn-warning" onClick={retryQuiz}>Retry</button>
                     </div>
                 </div>
             </>
@@ -56,11 +57,14 @@ const QuizApp = () => {
                         <p>{currentQuestion + 1}. {currentQuiz.question}</p>
                     </div>
                     <div className="option_body">
-                        {currentQuiz.answer.map((options, index) => (
-                            <button key={index} onClick={() => nextQuestion(options)} className="option_button">
-                                {options}
-                            </button>
-                        ))}
+                        <p>Choose the correct option: </p>
+                        <div className="select_option">
+                            {currentQuiz.answer.map((options, index) => (
+                                <button key={index} onClick={() => nextQuestion(options)} className="btn btn-primary option_button">
+                                    {options}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

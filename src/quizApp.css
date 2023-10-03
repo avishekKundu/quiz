@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main_content {
+    background-image: url('../public/backgroundImg.jpg');
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    padding: 20px 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content_head {
+    color: white;
+    width: 50%;
+    min-width: 50vw;
+    max-width: 50%;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    padding: 10px 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+.content_body {
+    height: 88%;
+    min-height: 70vh;
+    max-height: 88%;
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.body_head {
+    color: white;
+    font-size: 25px;
+    padding: 5px 15px;
+    width: 60%;
+    min-width: 18vh;
+    max-width: 60%;
+    height: 200px;
+}
+
+.body_head center {
+    font-size: 45px;
+}
+
+.option_body {
+    color: white;   
+    width: 39%;
+    padding: 10px;
+    justify-content: start;
+    align-items: start;
+    margin-top: 60px;
+    height: 370px;
+}
+
+.option_body p {
+    height: 5px;
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.select_option {
+    padding: 10px 10px;
+    height: 90;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 25px;
+}
+
+.message_button {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
